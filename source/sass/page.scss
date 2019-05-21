@@ -36,6 +36,13 @@
     background-image: linear-gradient(180deg, #140707 0%, rgba(47, 0, 0, 0.34) 100%);
     z-index: 1;
   }
+
+  &--pizza {
+    background-image: url("../img/restaurant.jpg");
+    &::before {
+      background-image: linear-gradient(180deg, #140707 0%, rgba(47, 0, 0, 0.08) 100%)
+    }
+  }
 }
 
 @media (min-width: $big-mobile) {
