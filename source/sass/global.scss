@@ -13,3 +13,24 @@ body {
   padding: 0;
   background-color: lightblue;
 }
+
+h1 {
+  font-family: $decfont;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: $secondfont;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
