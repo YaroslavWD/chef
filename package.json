@@ -1,8 +1,8 @@
 {
-  "name": "alla",
+  "name": "chef",
   "version": "1.0.0",
   "private": true,
-  "description": "alla designer",
+  "description": "chef",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.1.x",
