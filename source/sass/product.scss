@@ -53,7 +53,14 @@
   background-image: url("../img/icon-basket--dark.svg");
   background-repeat: no-repeat;
   background-position: center;
+  transition: all, 0.3s;
+  position: relative;
 }
+
+.product__link-basket:hover {
+  animation: heart 2s infinite;
+}
+
 
 @media (min-width: $big-mobile) {
   .product {
@@ -80,6 +87,42 @@
 
 @media (min-width: $tablet) {
   .product {
-    width: 32%;
+    margin-left: 1.5%;
+    width: 30%;
+    margin-right: 1.5%;
+  }
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1.0);
+  }
+
+  75% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(254, 237, 0, 0.4);
+  }
+  70% {
+      box-shadow: 0 0 0 10px rgba(254, 237, 0, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(254, 237, 0, 0);
   }
 }

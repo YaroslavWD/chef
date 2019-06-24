@@ -14,6 +14,7 @@
     border-radius: 50%;
     left: 0;
     top: 4px;
+    animation: pulse 2s infinite;
   }
 
   &::after {
@@ -28,6 +29,8 @@
     top: 16px;
   }
 }
+
+
 
 .basket__title {
   font-family: $secondfont;

@@ -1,0 +1,126 @@
+//Карточка товара
+
+.card {
+  padding-top: 30px;
+  border-bottom: 0;
+}
+
+.card__img-container {
+  width: 300px;
+  height: 300px;
+  background-color: $color-1;
+  margin-bottom: 30px;
+}
+
+
+.card-form__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  border: none;
+  min-height: 30px;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid #f2f2f2;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  input {
+    text-align: center;
+  }
+}
+
+.card-form__input-wrap {
+  padding: 0;
+  margin: 0;
+  max-width: 60px;
+}
+
+.card-form__title {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Arial", "sans-serif";
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #333333;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.card-form__label {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Arial", "sans-serif";
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+}
+
+.card-form__btn-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  button {
+    background-color: $color-1;
+    border: none;
+    color: $font-color-2;
+    font-family: $font;
+  }
+}
+
+ul.card__nav-tabs {
+  border-bottom: 0;
+}
+
+ul.card__nav-tabs li.card__nav-item a.card__nav-link--active {
+  color: $font-color-2;
+  background-color: $color-1;
+  border-bottom: 0;
+}
+
+
+@media (min-width: $big-mobile) {
+  .card__img-container {
+    width: 100%;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+
+  .card-form {
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+@media (min-width: $tablet) {
+  .card__container {
+    display: flex;
+  }
+
+  .card__img-container {
+    width: 49%;
+    height: auto;
+    margin-right: 30px;
+  }
+
+  .card__form-wrap {
+    width: 50%;
+  }
+}
+
+@media (min-width: $desktop) {
+  .card__container {
+    max-width: 1024px;
+  }
+}

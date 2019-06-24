@@ -18,6 +18,12 @@
   }
 }
 
+@media (min-width: $tablet) {
+  .products__list {
+    justify-content: flex-start;
+  }
+}
+
 @media (min-width: $desktop) {
   .products {
     display: flex;
@@ -25,7 +31,8 @@
   }
 
   .products__list {
-    width: 74%;
+    width: 940px;
+    justify-content: flex-start;
   }
 
   .products__basket {

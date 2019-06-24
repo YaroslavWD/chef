@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <title>От Шефа - не просто еда</title>
+</head>
+<body>
+  <section class="card">
+    <div class="wrapper">
+      <div class="card__container">
+          <div class="card__img-container">
+            <img class="card__img" src="" alt="">
+          </div>
+          <div class="card__form-wrap">
+            <form class="card-form" action="post">
+              <h2 class="card-form__title">Товар 2</h2>
+
+              <div class="card-form__item">
+                <label class="card-form__label">Артикул:</label>
+                <div>adv</div>
+              </div>
+              <div class="card-form__item">
+                <label class="card-form__label">Цена:</label>
+                <div>200 руб</div>
+              </div>
+              <div class="card-form__item">
+                <label class="control-label card-form__label" for="product_price">Количество (шт.):</label>
+                <p class="card-form__input-wrap"><input type="number" name="count" id="product_price" class="input-sm form-control" placeholder="1"></p>
+              </div>
+              <div class="card-form__item">
+                  <label class="control-label card-form__label">Вес:</label>
+                  <div class="">4 кг.</div>
+              </div>
+              <div class="card-form__item">
+                  <label class="control-label card-form__label" for="option_color">Цвета:</label>
+                  <div>
+                    <select name="options[color]" class="input-sm form-control" id="option_color">
+                        <option value="Красный">Красный</option>
+                        <option value="Зеленый">Зеленый</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="card-form__item">
+                  <label class="control-label card-form__label" for="option_size">Размеры:</label>
+                  <div>
+                      <select name="options[size]" class="input-sm form-control" id="option_size">
+                          <option value="M">M</option>
+                          <option value="L">L</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="card-form__item">
+                <div class="card-form__btn-wrap">
+                  <button type="submit" class="btn btn-outline-primary" name="ms2_action" value="cart/add">Добавить в корзину</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <ul class="nav nav-tabs card__nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item card__nav-item">
+              <a class="nav-link active card__nav-link card__nav-link--active" data-toggle="tab" href="#home" role="tab" aria-controls="home">Описание</a>
+          </li>
+          <li class="nav-item card__nav-item">
+              <a class="nav-link nav-link active card__nav-link" data-toggle="tab" href="#comments" role="tab" aria-controls="comments">Комментарии</a>
+          </li>
+        </ul>
+        <div class="col-sm-12">
+            <div class="tab-content">
+                <div class="tab-pane mt-4 active" id="home" role="tabpanel">
+                    <p><strong>Lorem Ipsum</strong><span> - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</span></p>        </div>
+                <div class="tab-pane mt-4" id="comments" role="tabpanel">
+                    <div class="comments">
+
+
+            <h3 class="title">Комментарии (<span id="comment-total">0</span>)</h3>
+
+            <div id="comments-wrapper">
+                <ol class="comment-list" id="comments"></ol>
+            </div>
+
+            <div id="comments-tpanel">
+                <div id="tpanel-refresh"></div>
+                <div id="tpanel-new"></div>
+            </div>
+        </div><div class="ticket-comments alert alert-warning">
+            <p>Вы должны авторизоваться, чтобы оставлять комментарии.</p>
+        </div>        </div>
+            </div>
+        </div>
+    </div>
+  </section>
+</body>
+</html>

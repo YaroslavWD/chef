@@ -28,6 +28,21 @@
     background-position: center;
     left: 13px;
     top: 16px;
+    transition: all, 0.3s;
+  }
+
+  &:hover {
+
+    &::before {
+      background-color: #8ab933;
+      border: 0.5px solid $black;
+      transition: all, 0.3s;
+    }
+
+    &::after {
+      background-image: url("../img/icon-phone-hover.svg");
+      transition: all, 0.3s;
+    }
   }
 }
 
@@ -57,5 +72,18 @@
     .phone {
       margin-right: 0;
     }
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(254, 237, 0, 0.4);
+  }
+  70% {
+      box-shadow: 0 0 0 10px rgba(254, 237, 0, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(254, 237, 0, 0);
   }
 }
