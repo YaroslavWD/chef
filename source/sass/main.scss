@@ -1,6 +1,5 @@
 .main {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  margin-top: auto;
 }
 
 .main__title {
@@ -12,7 +11,26 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $font-color-1;
-  padding-bottom: 50px;
+  text-align: center;
+  width: auto;
+  height: 90px;
+  background-image: url("../img/VseChtoLubite.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  span {
+    display: none;
+  }
+}
+
+.main__container {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main__btn {
@@ -20,22 +38,89 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  font-family: $secondfont;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 600;
+  font-family: $font-1;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 400;
   color: $font-color-2;
   text-transform: uppercase;
-  padding: 10px 30px;
+  padding: 10px 30px 4px;
   background-color: $color-1;
-  width: 249px;
+  width: 200px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* Текстовый вариант центрального блока
+
+.main__title-vertical {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: left;
+}
+
+.main__title {
+  display: grid;
+  grid-template-columns: 60px 60px 60px 60px 60px;
+  grid-template-rows: 75px 75px;
+  grid-template-areas: "main__title-vertical main-title-big main-title-big main__title-row main__title-row" "main__title-vertical main-title-big main-title-big main__title-row--2 main__title-row--2";
+  padding-bottom: 30px;
+}
+
+.main__title-vertical { grid-area: main__title-vertical; }
+
+.main__title-row { grid-area: main__title-row; }
+
+.main__title-row--2 { grid-area: main__title-row--2; }
+
+.main-title-big { grid-area: main-title-big; }
+
+
+.main__title-vertical {
+  font-size: 34px;
+}
+
+.main-title-big {
+  font-size: 48px;
+}
+
+.main__title-row {
+  font-size: 16px;
+}
+
+*/
+
+
+@media (min-width: $big-mobile) {
+  .main__title {
+    width: auto;
+    height: 120px;
+    background-image: url("../img/VseChtoLubite.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+  }
+
+  .main__btn {
+    width: 270px;
+  }
 }
 
 
 @media (min-width: $desktop) {
-  .main {
-    padding-left: 7%;
-    margin-top: auto;
+  .main__title {
+    width: 308px;
+    height: 136px;
+  }
+
+  .main__btn {
+    width: 308px;
+    padding-top: 16px;
+    padding-bottom: 8px;
   }
 }

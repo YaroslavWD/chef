@@ -1,77 +1,107 @@
 .basket {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
-  padding-left: 60px;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border: 0.5px solid $color-1;
-    border-radius: 50%;
-    left: 0;
-    top: 4px;
-    animation: pulse 2s infinite;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-image: url("../img/icon-basket.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    left: 13px;
-    top: 16px;
-  }
+  width: 36px;
+  height: 36px;
 }
 
+.icon-basket {
+  fill: #ffffff;
+}
 
-
-.basket__title {
-  font-family: $secondfont;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 300;
-  color: $font-color-1;
+.basket {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 .basket__sum {
-  padding: 0;
-  margin: 0;
-  font-family: $secondfont;
-  font-size: 22px;
-  line-height: 33px;
-  font-weight: 300;
-  color: $color-1;
-  text-decoration: none;
-  text-transform: uppercase;
+  display: none;
 }
 
-.basket__count {
-  display: block;
-  font-family: $secondfont;
-  font-size: 16px;
-  line-height: 24px;
+.empty {
+  color: $white;
+  font-family: $font-1;
+  font-size: 12px;
+  line-height: 1.2;
   font-weight: 400;
-  color: #333333;
-  position: absolute;
-  z-index: 10;
-  left: 35px;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 10px;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    background-color: $color-1;
-    border-radius: 50%;
-    z-index: -1;
-    left: -4px;
-    top: 1px;
+.basket__text {
+  color: $white;
+  font-family: $font-1;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-align: center;
+}
+
+.empty {
+  display: none;
+}
+
+.no-empty {
+  display: block;
+}
+
+.basket___empty-icon {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  font-family: $font-1;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 50%;
+  background-color: $color-1;
+  left: 18px;
+  top: 15px;
+  color: $black;
+}
+
+.basket__sum {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+
+@media (min-width: $big-mobile) {
+  .basket__sum {
+    display: inherit;
+    font-size: 16px;
+    padding-left: 0;
+    padding-top: 17px;
+  }
+}
+
+
+@media (min-width: $tablet) {
+  .basket {
+    padding-left: 10px;
+    padding-top: 15px;
+  }
+
+  .basket___empty-icon {
+    width: 15px;
+    height: 15px;
+    left: 35px;
+    padding-top: 1px;
+  }
+
+  .basket__text {
+    font-size: 12px;
+  }
+
+  .basket__sum {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $big-desktop) {
+  .basket {
+    padding-top: 20px;
   }
 }

@@ -7,35 +7,36 @@
 @import "main.scss";
 @import "footer.scss";
 
-@import "address.scss";
 @import "nav.scss";
-@import "phone.scss";
 @import "basket.scss";
-@import "info.scss";
 @import "connect.scss";
 @import "main-content.scss";
 
 
-// menu
+// // menu
 
-@import "page.scss";
-@import "sort-nav.scss";
-@import "products.scss";
-@import "product.scss";
-@import "order.scss";
-@import "contacts.scss";
-@import "point.scss";
-@import "tags.scss";
-
-
-// restaurant
-@import "block.scss";
-@import "gallery.scss";
-@import "cook.scss";
-@import "wish.scss";
-@import "category.scss";
+// @import "page.scss";
+// @import "sort-nav.scss";
+// @import "products.scss";
+// @import "product.scss";
+// @import "order.scss";
+// @import "contacts.scss";
+// @import "point.scss";
+// @import "tags.scss";
 
 
-@import "card.scss";
+// // restaurant
+// @import "block.scss";
+// @import "gallery.scss";
+// @import "cook.scss";
+// @import "wish.scss";
+// @import "category.scss";
 
-@import "animation.scss";
+
+// @import "card.scss";
+
+// @import "animation.scss";
+
+
+@import "page--about.scss";
+@import "page--catalog.scss";

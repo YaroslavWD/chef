@@ -7,6 +7,12 @@
   position: relative;
 }
 
+@media (min-width: 360px) {
+  .wrapper {
+    width: 360px;
+  }
+}
+
 @media (min-width: $big-mobile) {
   .wrapper {
     width: 100%;
@@ -39,6 +45,14 @@
       width: auto;
       padding: 0;
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 

@@ -1,78 +1,227 @@
 .header {
-  padding-top: 21px;
+  padding-top: 12px;
   position: relative;
   z-index: 10;
 }
 
+.header__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "two one three four";
+}
+
+.One { grid-area: One; }
+
+.two { grid-area: two; }
+
+.three { grid-area: three; }
+
+.four { grid-area: four; }
+
+
+.header__nav {
+  position: relative;
+}
+
 .header__logo-container {
-  &--index {
-    display: none;
-  }
+  background-image: url("../img/logo-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 85px;
+  padding-top: 0;
 
-  text-align: center;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-
-  img {
-    width: 145px;
+  svg {
+    width: 95px;
     height: auto;
+    display: block;
+    margin-top: 15px;
+    margin-left: 20px;
   }
 }
 
-.header__contacts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+.header__phone-icon {
+  svg {
+    fill: #ffffff;
+  }
+}
+
+.header__phone {
+  font-family: $font-1;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+.header__phone-link {
+  font-family: $font-1;
+  color: #ffffff;
+}
+
+.header__button {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+
+  svg {
+    fill: #ffffff;
+  }
+
+  &--close {
+    position: relative;
+
+    svg {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      transform: rotate(45deg);
+      background-color: #dddddd;
+      top: 0;
+      left: 16px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      transform: rotate(-45deg);
+      background-color: #dddddd;
+      top: 0;
+      left: 16px;
+    }
+  }
+}
+
+
+.line-burger {
+  fill: #ffffff;
+}
+
+.header__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.header__block {
+  padding-top: 10px;
+}
+
+.header__logo-container {
+  padding-top: 0;
 }
 
 @media (min-width: $big-mobile) {
   .header__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    grid-template-columns: 0.9fr 2fr 0.6fr 0.5fr;
   }
 
   .header__logo-container {
-    width: 20%;
-    max-width: 145px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-    img {
-      width: 100%;
+
+@media (min-width: $tablet) {
+  .header__wrapper {
+    display: grid;
+    grid-template-columns: 0.7fr 1.2fr 1.3fr 0.5fr 1fr 1.3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "one two two three four four";
+  }
+
+  .one { grid-area: one; }
+
+  .two { grid-area: two; }
+
+  .three { grid-area: three; }
+
+  .four { grid-area: four; }
+
+  .header__phone-icon {
+    display: none;
+  }
+
+  .header__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-left: 20px;
+  }
+
+  .header__phone {
+    display: block;
+    font-family: $font-1;
+    font-size: 26px;
+    line-height: 1.2;
+    display: flex;
+  }
+
+  .header__phone-link {
+    padding-left: 5px;
+
+    &:hover {
+      color: $color-1;
+      text-decoration: none;
     }
   }
 
-  .header--pizza {
-    .header__nav {
-      padding-top: 12px;
-    }
+  .header__button {
+    display: none;
+  }
 
-    .header__logo-container {
-      margin-bottom: 5px;
-    }
-
-    .header__contacts {
-      margin-left: auto;
-    }
+  .header__icon {
+    width: 36px;
+    height: 36px;
   }
 }
 
 @media (min-width: $desktop) {
-  .header {
-    padding-left: 8%;
-    padding-right: 20px;
-    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+  // .header__wrapper {
+  //   grid-template-areas: "one . three four four four" "two two two two two two";
+  // }
+}
 
-    &--pizza {
-      padding-left: 0;
+@media (min-width: $big-desktop) {
+  .header__wrapper {
+    grid-template-columns: 0.7fr 1.2fr 1.3fr 0.5fr 1fr 1.3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "one two two three four four";
+  }
 
-      .header__nav {
-        margin-left: auto;
-        margin-right: auto;
-      }
+  .header__contacts {
+    padding-left: 0;
+  }
+
+
+  .header__logo-container {
+    width: 170px;
+    height: 95px;
+
+    svg {
+      width: 95px;
+      margin-left: 25px;
+      margin-top: 20px;
     }
+  }
+
+  .header__nav {
+    padding-top: 0;
   }
 
 }
